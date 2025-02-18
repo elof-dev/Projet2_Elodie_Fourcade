@@ -1,19 +1,21 @@
-# Création d'un système de surveillance des prix du site https://books.toscrape.com/index.html
+## Création d'un système de surveillance des prix du site https://books.toscrape.com/index.html
 
 ## Pré-requis
 
 Utilisation de Python 3.13.1
 
 ## Etapes à suivres :
+```bash
 - cloner le repository github en local
+https://github.com/elof-dev/Projet2_Elodie_Fourcade
 - créer l'environnement virtuel : 
-```bash py -m venv .venv```
+ py -m venv .venv
 - activer l'environnement virtuel : 
-```bash .venv\Scripts\activate```
+ .venv\Scripts\activate
 - installer les dépendances : 
-```bash pip install -r requirements.txt```
+ pip install -r requirements.txt
 - exécuter le script :
-```bash py main.py```
+ py main.py
 
 Voici la structure attendu lors de l'exécution du script main.py :
 └── Extract_bookstoscrap_YYYYMMDD_HHMM 
