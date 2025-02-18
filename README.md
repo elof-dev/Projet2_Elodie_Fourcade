@@ -18,7 +18,7 @@ Utilisation de Python 3.13.1
 
 - exécuter le script : ``py main.py``
 ```bash
-Voici la structure attendu lors de l'exécution du script main.py :
+Voici la structure attendue lors du lancement du script main.py :
 └── Extract_bookstoscrap_YYYYMMDD_HHMM 
     ├── [Nom de la catégorie]
     │   ├── [NomDeLaCategorie_book_infos.csv] 
