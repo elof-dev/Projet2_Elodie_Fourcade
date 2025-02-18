@@ -17,7 +17,6 @@ Utilisation de Python 3.13.1
 - installer les dépendances :  ``pip install -r requirements.txt``
 
 - exécuter le script : ``py main.py``
-
 ```bash
 Voici la structure attendu lors de l'exécution du script main.py :
 └── Extract_bookstoscrap_YYYYMMDD_HHMM 

@@ -134,7 +134,6 @@ def create_csv_for_category(category_name, category_url):
 
 # On appelle la fonction pour créer les URLs des catégories
 categorie_urls = extract_all_categories(base_url)
-
 # Vérifier que le nombre de catégories extraites est bien de 50
 if len(categorie_urls) != 50:
     print(f"Attention : {len(categorie_urls)} catégories extraites,"
