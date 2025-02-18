@@ -24,3 +24,4 @@ Voici la structure attendue lors du lancement du script main.py :
     │   ├── [NomDeLaCategorie_book_infos.csv] 
     │   └── images                
     └── ...
+    
