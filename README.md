@@ -6,9 +6,9 @@ Utilisation de Python 3.13.1
 
 ## Etapes à suivres :
 
-- cloner le repository github en local : ``git clone https://github.com/elof-dev/Projet2_Elodie_Fourcade.git``
+- cloner le repository github en local : ``https://github.com/elof-dev/Projet2_Elodie_Fourcade.git``
 
-- se positionner sur le dossier : ``cd Projet2_Elodie_Fourcade``
+- se positionner sur le dossier : ``Projet2_Elodie_Fourcade``
 
 - créer l'environnement virtuel : ``py -m venv .venv``
 

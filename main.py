@@ -83,7 +83,7 @@ def extract_book_info(book_url, category_name):
     response = requests.get(image_url) 
     category_images_folder = os.path.join(BASE_FOLDER, category_name, "images")
     os.makedirs(category_images_folder, exist_ok=True) 
-    image_title = "".join([c if c.isalnum() else "_" for c in title])[:100]
+    image_title = "".join([c if c.isalnum() else "_" for c in title])[:70]
     image_name = os.path.join(category_images_folder, f"{image_title}_{upc}.jpg")
     
     with open(image_name, 'wb') as file:
