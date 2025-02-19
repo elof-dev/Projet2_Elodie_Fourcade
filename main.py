@@ -4,6 +4,7 @@ import csv
 import os
 import datetime
 from urllib.parse import urljoin
+import re
 
 # Création du dossier de base avec la date et l'heure de l'extraction afin 
 # de pouvoir comparer les prix aux différentes dates
@@ -34,10 +35,7 @@ def extract_books_urls_from_all_categories(category_url):
     # livres annoncé afin de pouvoir le comparer au total de livres extraits
     response = requests.get(current_page_url)
     soup = BeautifulSoup(response.text, 'html.parser')
-    form = soup.find('form', method='get', class_='form-horizontal')
-    books_number = form.find('strong')
-    total_books_announced = int(books_number.text.strip())
-
+        
     # Parcourir les pages de la catégorie
     while True:
         response = requests.get(current_page_url)
@@ -72,7 +70,7 @@ def extract_book_info(book_url, category_name):
     title = soup.find('h1').text.strip()
     price_excl_tax = float(table.find_all('td')[2].text.strip().replace("£", ""))
     price_incl_tax = float(table.find_all('td')[3].text.strip().replace("£", ""))
-    availability = table.find_all('td')[5].text.strip()
+    availability = int(re.search(r'\((\d+)', table.find_all('td')[5].text.strip()).group(1))
     product_description_div = soup.find('div', id='product_description')
     if product_description_div:
         product_description = (product_description_div.find_next('p').text.strip())  
