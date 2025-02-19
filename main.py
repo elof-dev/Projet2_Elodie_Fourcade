@@ -70,8 +70,8 @@ def extract_book_info(book_url, category_name):
     table = soup.find('table', class_='table table-striped')
     upc = table.find('td').text.strip()
     title = soup.find('h1').text.strip()
-    price_excl_tax = table.find_all('td')[2].text.strip().replace("Â£", "£")
-    price_incl_tax = table.find_all('td')[3].text.strip().replace("Â£", "£")
+    price_excl_tax = float(table.find_all('td')[2].text.strip().replace("£", ""))
+    price_incl_tax = float(table.find_all('td')[3].text.strip().replace("£", ""))
     availability = table.find_all('td')[5].text.strip()
     product_description_div = soup.find('div', id='product_description')
     if product_description_div:
